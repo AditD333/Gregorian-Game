@@ -1832,7 +1832,7 @@ def menu(record,r_name):
 
 		clear()
 		print("Game will start, read the instruction below!\n\n")
-		print("1. Guess the day of the week IN 9 SECONDS that corresponds to question! Only the first 3 letter(s)! (Case INSENSITIVE)")
+		print("1. Guess the day of the week IN 16 SECONDS that corresponds to question! Only the first 3 letter(s)! (Case INSENSITIVE)")
 		print("2. You have 3 life(s)/attempt(s) to try, accumulated until next question(s)")
 		print("3. The calendar is in GREGORIAN CALENDAR format! Including +1752 and below (!)")
 		print("4. (For some cases only) Watch out! One backspace when try to solve the answer moves the field by one line!")
@@ -1886,7 +1886,7 @@ def menu(record,r_name):
 						d = rand(1,28)
 				print("+%s - %02d - %02d" % (y1,month,d))
 				try:
-					ans = inputimeout(prompt="\n\nAnswer -->  ",timeout=9)
+					ans = inputimeout(prompt="\n\nAnswer -->  ",timeout=16)
 					if ans.lower() == c.day_abbr[c.weekday(y400,month,d)].lower():
 						pts = pts + year
 						print("\n\nCorrect!")
@@ -1910,7 +1910,7 @@ def menu(record,r_name):
 					d = rand(26,31)
 					print("%05d - %02d - %02d" % (y,month,d))
 					try:
-						ans = inputimeout(prompt="\n\nAnswer -->  ",timeout=9)
+						ans = inputimeout(prompt="\n\nAnswer -->  ",timeout=16)
 						if ans.lower() == c.day_abbr[c.weekday(y,month,d)].lower():
 							pts = pts + year
 							print("\n\nCorrect!")
@@ -1943,7 +1943,7 @@ def menu(record,r_name):
 							d = rand(1,28)
 					print("+%04d - %02d - %02d" % (y,month,d))
 					try:
-						ans = inputimeout(prompt="\n\nAnswer -->  ",timeout=9)
+						ans = inputimeout(prompt="\n\nAnswer -->  ",timeout=16)
 						if ans.lower() == c.day_abbr[c.weekday(y,month,d)].lower():
 							pts = pts + year
 							print("\n\nCorrect!")
